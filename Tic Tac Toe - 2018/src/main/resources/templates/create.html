@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Sign up</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+            src="https://code.jquery.com/jquery-3.3.1.js"
+            integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+            crossorigin="anonymous">
+    </script>
+
+    <script th:inline="javascript">
+        /*<![CDATA[*/
+
+        var alert_msg = [[${message}]];
+        if(alert_msg !== ""){
+            alert(alert_msg);
+        }
+
+        /*]]>*/
+    </script>
+</head>
+<body>
+
+<nav>
+    <div class="container">
+        <span id="logo">Tic Tac Toe</span>
+        <a href="/create" class="selected">Sign up</a>
+        <a href="/login">Log in</a>
+        <a href="/leaderboard">Leaderboard</a>
+    </div>
+</nav>
+<div class="container">
+    <form action="/create" method="post" class="form-wrapper">
+        <p>Nickname: <input type="text" name="nickname" class="form-input"/></p>
+        <p>Password: <input type="password" name="password" class="form-input"/></p>
+        <p><input type="checkbox" name="verified"/>I'm not a robot</p>
+
+        <p class="form-btn-wrapper"><button type="submit" class="form-btn">Create</button></p>
+    </form>
+</div>
+</body>
+</html>

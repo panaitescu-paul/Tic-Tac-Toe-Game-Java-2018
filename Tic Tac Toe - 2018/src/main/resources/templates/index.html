@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    
+    <link rel="stylesheet" href="style.css" />
+
+</head>
+<body>
+
+<nav>
+    <div class="container">
+        <span id="logo">Tic Tac Toe</span>
+        <a href="/logout"> Log out</a>
+        <a href="/" class="selected">Play</a>
+        <a href="/leaderboard">Leaderboard</a>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="wrapper">
+        <div class="container-left">
+            <div class="board">
+                <span th:each="square : ${squares}">
+                    <a th:href="@{/place(id=${square.id})}" th:style="${square.tag.type} == '#' ? 'color: transparent'" th:text="${square.tag.type}" class="btn btn-create cell"></a>
+                </span>
+            </div>
+        </div><p ></p>
+        <div class="container-right">
+            <div class="form-wrapper">
+                <p>
+                    <span>Stats for Player: </span>
+                    <span th:text="${account?.nickname}" class="highlight blue"></span>
+                </p>
+                <p>
+                    <span>Wins: </span>
+                    <span th:text="${account?.wins}" class="highlight" ></span>
+                </p>
+                <p>
+                    <span>Ties: </span>
+                    <span th:text="${account?.ties}" class="highlight"></span>
+                </p>
+                <p>
+                    <span>Losses: </span>
+                    <span th:text="${account?.losses}" class="highlight"></span>
+                </p>
+
+                <p class="form-btn-wrapper">
+                    <a th:href="${gameState} == 'GAME_ENDED' ? '/restart'">
+                        <button th:class="${gameState} == 'GAME_ENDED' ? 'form-btn' : 'form-btn disabled'">New Game</button>
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

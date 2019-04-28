@@ -1,0 +1,289 @@
+body {
+    font-family: arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 1024px;
+    margin: 0 auto;
+}
+
+.wrapper {
+    border: 1px solid #008CBA;
+    margin-top: 40px;
+    height: 430px;
+    border-radius: 3px;
+}
+
+.form-wrapper {
+    border: 1px solid #008CBA;
+    border-radius: 3px;
+    width: 400px;
+    margin: auto;
+    margin-top: 40px;
+    padding: 20px;
+}
+
+.form-wrapper p {
+    height: 40px;
+    line-height: 40px;
+}
+
+.form-input {
+    float: right;
+}
+
+.form-btn-wrapper {
+    text-align: center;
+}
+
+button {
+    outline: none;
+}
+
+.form-btn {
+    height: 50px;
+    color: #f6faed;
+    background-color: #83d021;
+    border-radius: 40px;
+    padding: 5px 30px;
+    font-size: 16px;
+    border: 1px solid #a5c542;
+    margin-top: 5px;
+}
+
+.form-btn-wrapper a.form-btn {
+    height: 50px;
+    color: #f6faed;
+    background-color: #83d021;
+    border-radius: 40px;
+    padding: 5px 30px;
+    font-size: 16px;
+    border: 1px solid #a5c542;
+    margin-top: 5px;
+}
+
+.form-wrapper .disabled,
+.form-wrapper .disabled:hover,
+.form-wrapper .disabled:active {
+    background-color: #eceff1;
+    color: #78909c;
+    border: 1px solid #eceff1;
+    cursor: no-drop;
+}
+
+.form-btn:hover {
+    background-color: #37d023;
+
+}
+
+.form-btn:active {
+    background-color: #10d02f;
+
+}
+
+.form-wrapper .highlight {
+    background-color: #ff702a;
+    border-radius: 3px;
+    color: #fff;
+    padding: 3px 12px;
+    margin-left: 5px;
+}
+
+.highlight.blue {
+    background-color: #528fcc;
+}
+
+.container-left {
+    float: left;
+    width: 510px;
+    height: 100%;
+    border-right: 1px solid #518ecc;
+}
+
+.container-right {
+    float: right;
+    width: 510px;
+    height: 100%;
+}
+
+.container-right .form-wrapper {
+    border: none;
+    margin-top: 10px;
+}
+
+.board {
+    background-color: #fff;
+    width: 300px;
+    height: 300px;
+    margin: auto;
+    margin-top: 60px;
+    white-space: normal
+}
+
+.board .cell {
+    background-color: #528fcc;
+    border: 1px solid #5569a5;
+    width: 91px;
+    height: 91px;
+    font-size: 79px;
+    color: #f2f6f7;
+    font-weight: 600;
+    text-align: center;
+    display: inline-block;
+    margin: 2px;
+    border-radius: 7px;
+    padding: 0 0;
+    outline: none;
+    box-shadow:none;
+}
+
+.board .cell:hover {
+    background-color: #528ac7;
+    box-shadow:none;
+}
+
+.board .cell:active {
+    background-color: #5284c1;
+    box-shadow:none;
+}
+
+.leaderboard-table {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    border-radius: 3px;
+}
+
+.leaderboard-table th {
+    background-color: #eaeef0;
+    color: #78909c;
+    height: 50px;
+    border-radius: 3px;
+    border-top-redius: 3px;
+    border: 1px solid #e9edef;
+    text-transform: uppercase;
+}
+
+.leaderboard-table tr {
+    height: 40px;
+    color: #263238;
+    padding-left: 20px;
+}
+
+.leaderboard-table tr:hover {
+    background-color: #f2f6f8;
+}
+
+.leaderboard-table tr:nth-child(even) {
+    background-color: #eaeef0;
+}
+
+nav {
+    background-color: #fff;;
+    height: 60px;
+    border-bottom: 1px solid #518ecc;
+}
+
+nav a {
+    color: #518ecc;
+    padding: 20px 20px;
+    text-decoration: none;
+    height: 60px;
+    line-height: 60px;
+    font-size: 16px;
+}
+
+nav a.selected {
+    border-bottom: 2px solid #518ecc;
+}
+
+#logo {
+    color: #518ecc;
+    font-weight: bold;
+    font-size: 18px;
+    padding-right: 40px;
+}
+
+
+
+.footer {
+    padding-top: 20px;
+    padding-right: 5px;
+    text-align: right;
+    color: #666666;
+    font-style: italic;
+
+}
+
+/* table styles */
+/* https://www.w3schools.com/html/html_tables.asp */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 5px 8px 5px 20px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+input {
+    display: inline;
+    width: auto;
+    padding: .5rem .75rem;
+    font-size: 1rem;
+    line-height: 1.25;
+    color: #495057;
+    background-color: #fff;
+    background-image: none;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, .15);
+    border-radius: .25rem;
+}
+
+/* Buttons */
+/* https://www.w3schools.com/css/css3_buttons.asp */
+
+.btn {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: black;
+    padding: 14px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 24px;
+    border-radius: 5px; /* https://www.w3schools.com/css/css3_borders.asp */
+    box-shadow: 1px 1px 1px #888888;
+    -webkit-transition-duration: 0.1s; /* Safari */
+    transition-duration: 0.1s;
+}
+
+.btn-create {
+    background-color: aqua;
+
+}
+
+.btn-login {
+    background-color: chartreuse;
+}
+
+.btn-leaderboard {
+    background-color: khaki;
+}
+
+/* Red */
+
+.btn:hover {
+    box-shadow: 2px 2px 2px #888888;
+}
+
+.w {
+    width: 20%;
+}

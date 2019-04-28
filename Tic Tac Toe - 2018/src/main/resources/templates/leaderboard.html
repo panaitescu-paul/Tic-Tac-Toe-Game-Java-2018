@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Leaderboard</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+</head>
+<body>
+
+<nav>
+    <div th:switch="${userState}">
+        <div th:case="'NO_USER'" class="container">
+            <span id="logo">Tic Tac Toe</span>
+            <a href="/create">Sign up</a>
+            <a href="/login">Log in</a>
+            <a href="/leaderboard" class="selected">Leaderboard</a>
+        </div>
+        <div th:case="'USER'" class="container">
+            <span id="logo">Tic Tac Toe</span>
+            <a href="/logout">Log out</a>
+            <a href="/">Play</a>
+            <a href="/leaderboard" class="selected">Leaderboard</a>
+        </div>
+    </div>
+</nav>
+<div class="container">
+
+    <table class="leaderboard-table">
+        <thead>
+            <tr>
+                <th>Player</th>
+                <th>Wins</th>
+                <th>Losses</th>
+                <th>Ties</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="player : ${players}">
+                <td th:text="${player.nickname}"></td>
+                <td th:text="${player.wins}"></td>
+                <td th:text="${player.losses}"></td>
+                <td th:text="${player.ties}"></td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
+
+</body>
+</html>

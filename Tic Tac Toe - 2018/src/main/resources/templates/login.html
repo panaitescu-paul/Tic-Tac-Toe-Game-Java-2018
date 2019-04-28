@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<nav>
+    <div class="container">
+        <span id="logo">Tic Tac Toe</span>
+        <a href="/create">Sign up</a>
+        <a href="/login" class="selected">Log in</a>
+        <a href="/leaderboard">Leaderboard</a>
+    </div>
+</nav>
+<div class="container">
+
+    <form action="/login" method="post" class="form-wrapper">
+        <p>Nickname: <input type="text"     name="nickname" class="form-input"/></p>
+        <p>Password: <input type="password" name="password" class="form-input"/></p>
+        <p class="form-btn-wrapper"><button type="submit" class="form-btn">Login</button></p>
+    </form>
+
+</div>
+
+</body>
+</html>
